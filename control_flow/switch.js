@@ -8,7 +8,7 @@ switch (month) {
         break;
     case 3:
         console.log("march");
-        
+        break;
     case 4:
         console.log("april");
         break;
