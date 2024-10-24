@@ -32,5 +32,5 @@ const shopping = [
         price: 300
     }
 ]
-const tatal = shopping.reduce((ini,item)=> ini+item,0)
+const tatal = shopping.reduce((ini,item)=> ini+item.price,0)
 console.log(tatal);
