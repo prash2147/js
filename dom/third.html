@@ -12,7 +12,10 @@
     const a = document.createElement('div')
     console.log(div);
     div.className = "main"
-    div.id = Math.random()*10
-    
+    div.id = Math.round(random()*10)
+    div.setAttribute("title","generated title")
+    div.style.backgroundColor = "green"
+    const addtext = document.createTextNode("chai aur code")
+    div.appendChild(addtext)
 </script>
 </html>
