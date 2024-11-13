@@ -56,7 +56,7 @@ promiseFour.then((user)=>{
     
 })
 
-const promiseFive = Promise(function(resolve,reject){
+const promiseFive = new Promise(function(resolve,reject){
     setTimeout(function(){
         let error = true
         if(!error){
@@ -67,8 +67,36 @@ const promiseFive = Promise(function(resolve,reject){
     },1000)
 })
     async function consumePromiseFive(){
-        const response = await promiseFive
-        console.log(response);
+        try{const response = await promiseFive
+            console.log(response);
+        } catch(error){
+            console.log(error);
+            
+        }
         
     }
 consumePromiseFive()
+
+// async function getAlluser() {
+//     try{
+//         const response = await fetch('https://www.youtube.com/watch?v=_TjtAyMkiTI&t=17899s')
+//     const data = await response.json()
+//     console.log(data);
+//     } catch(error) {
+//         console.log("E:, error");
+        
+//     }
+    
+// }
+// getAlluser()
+
+fetch('https://api.github.com/users/hiteshchoudhary')
+.then(()=>{
+    return response.json()
+})
+.then((data) => {
+    console.log(data);
+    
+})
+.catch((error)=> console.log(error)
+)
