@@ -26,7 +26,7 @@ function User(username,logincount,islogedIn){
 }
 const userOne = new User('chai',6,true)
 const userTwo = new User('prashant',9,true)
- console.log(userOne);
+ //console.log(userOne);
 // console.log(userTwo);
 //console.log(userOne.constructor);
 console.log(typeof(userOne));
